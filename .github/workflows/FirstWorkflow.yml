@@ -11,7 +11,11 @@ jobs:
     steps:
       - run: echo "Hello World!"
       - run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
-
+      - name: Test Docker Action
+        uses: oussamamessaoudi/Action@latest
+        with:
+          who-to-greet: Oussama
+          
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repo
