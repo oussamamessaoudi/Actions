@@ -1,0 +1,19 @@
+name: First Workflow
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  FirstJob:
+    runs-on: ubunto-latest
+    steps:
+      - run: echo "Hello World!"
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: List files in repo
+        run: |
+          echo "Repo ${{ github.repository }} contains the following - files:"
+          tree
+        
+    
