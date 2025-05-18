@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
-      - run: “echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
+      - run: echo "::warning file=app.js,line=1,col=5,endColumn=7::Missing semicolon"
       - run: echo "::error file=app.js,line=1,col=5,endColumn=7::Error in app.js”
 
       - name: Checkout
