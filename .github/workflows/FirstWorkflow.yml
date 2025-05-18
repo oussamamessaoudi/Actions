@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
+      - run: echo "::error Erreur!"
+      - run: echo "::warning Warning!"
+
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: List files in repo
