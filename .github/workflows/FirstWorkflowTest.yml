@@ -1,9 +1,9 @@
 name: First Workflow Test
 on: 
+  workflow_dispatch:
   push:
     branches: 
       - test
-  workflow_dispatch:
 
 jobs:
   FirstJob:
